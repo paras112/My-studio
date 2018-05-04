@@ -1,0 +1,8 @@
+/* Show it's not fixed to the top */
+body {
+  min-height: 200px;
+}
+.navbar-static-top {
+
+	margin-bottom:19px;
+}

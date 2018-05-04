@@ -1,0 +1,58 @@
+{% extends 'base.html' %} 
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{%block headtitle %}Welcome{%endblock%}
+
+ <style>
+{% block style %}
+.jumbotron{
+    background-color:#155A1E;
+  }
+{% endblock %}
+ </style>
+
+<div class="jumbotron">
+    {% block jumbotron %}
+    <div class='container'>
+    <div class="row">
+    <div class='col-sm-6'>
+        <h1>My Studio</h1>
+        <p class="lead">Anything you want</p>
+        <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">Join Us &raquo;</a>
+      </div>
+      <div class='col-sm-6' >
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/zODRdf-eGSA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      </div>
+      </div>
+    {% endblock %}
+</div>
+
+
+
+{% block content %}
+<div class='row' >
+<div class='col-xs-6 pull-right'>
+<form method="POST" action=''>{% csrf_token%}
+{{form|crispy}}
+<input class='btn btn-primary' type="submit" value='submit' />
+</form>
+</div>
+
+<div class='col-sm-3'>
+<p class='lead'> Kishore Kumar</p>
+<img src="{% static 'img/k2.jpg'%}" class='ing-responsive'>
+</div>
+<div class='col-sm-3'>
+<p class='lead'>Sonu Nigam</p>
+
+</div>
+<div class='col-sm-3'>
+<p class='lead'>Atif Aslam</p>
+<img src="{% static 'img/a3.jpg'%}" class='ing-responsive'>
+</div>
+
+</div>
+
+{% endblock %}

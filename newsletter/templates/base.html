@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>{%block headtitle %}{% endblock %}|Mvp Landing</title>
+
+    <!-- Bootstrap core CSS -->
+ {% include 'head_css.html'%}
+ 
+{% block style %}
+
+{% endblock %}
+ 
+
+  </head>
+
+  <body>
+
+      {% include 'navbar.html' %}
+
+    {% block jumbotron%}
+
+    {% endblock %}
+    <main role="main" class="container">
+
+    {% block content %}
+
+    {% endblock %}
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+  </body>
+</html>
