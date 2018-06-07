@@ -6,3 +6,6 @@ body {
 
 	margin-bottom:19px;
 }
+.navbar {
+  min-height: 80px;
+}
